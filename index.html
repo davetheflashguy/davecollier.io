@@ -244,21 +244,22 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+  var scrolling_speed = 1000;
   // handle navigation clicks
   $("#link_home").click(function() {
     $('html, body').animate({
             scrollTop: $("#home_section").offset().top
-        }, 200);
+        }, scrolling_speed);
   })
   $("#link_resume").click(function() {
     $('html, body').animate({
             scrollTop: $("#resume_section").offset().top
-        }, 200);
+        }, scrolling_speed);
   })
   $("#link_contact").click(function() {
     $('html, body').animate({
             scrollTop: $("#contact_section").offset().top
-        }, 200);
+        }, scrolling_speed);
   })
 </script>
 </body>
