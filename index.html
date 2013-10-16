@@ -72,13 +72,13 @@
                 <div class="nav-collapse collapse">
                   <ul class="nav">
                     <li class="active">
-                      <a href="#home">Home</a>
+                      <a href="#home" id="link_home">Home</a>
                     </li>
                     <li class="">
-                      <a href="#resume">Resume</a>
+                      <a href="#resume" id="link_resume">Resume</a>
                     </li>
                     <li class="">
-                      <a href="#contact">Contact</a>
+                      <a href="#contact" id="link_contact">Contact</a>
                     </li>
                   </ul>
                 </div>
@@ -89,9 +89,8 @@
     </header>
 
     <div class="container">
-
+  <div id="home_section"></div>
   <div class="marketing">
-    <a name="home" id="home"></a>
     <h1>#home</h1> 
     <div id="home_banner" class="banner"></div>
 
@@ -110,7 +109,7 @@
       </div>
     </div>
     <hr class="soften">
-
+    <div id="resume_section"></div>
     <a name="resume" id="resume"></a>
     <h1>#resume</h1>
     <p class="marketing-byline"><a href="documents/DaveCollier.pdf" target="_blank" onClick="_gaq.push(['_trackEvent', 'Downloads', 'Resume']);">Download</a> a PDF version of my resume</p>
@@ -227,47 +226,9 @@
 
     <hr class="soften">
 
-    <a name="contact" id="contact"></a>
+    <div id="contact_section"></div>
     <h1>#contact</h1> 
     <p>The quickest and easiest way to get in touch with me is by <a href="mailto:davetheflashguy@gmail.com" >email</a>.</p>
-    <!--
-    <p>The quickest and easiest way to get in touch with me is by <a href="mailto:davetheflashguy@gmail.com">email</a> or you can use the form below.</p>
-    <br />
-    <form class="form-horizontal">
-      <fieldset>
-  
-      <div class="control-group">
-        <label class="control-label">Name</label>
-        <div class="controls">
-          <input id="Name" name="Name" type="text" placeholder="" class="input-xlarge" required="">
-        </div>
-      </div>
-
-      <div class="control-group">
-        <label class="control-label">Email</label>
-        <div class="controls">
-          <input id="Email" name="Email" type="text" placeholder="you@domain.com" class="input-xlarge" required="">
-          
-        </div>
-      </div>
-
-      <div class="control-group">
-        <label class="control-label">Message</label>
-        <div class="controls">                     
-          <textarea id="Message" name="Message"></textarea>
-        </div>
-      </div>
-
-      <div class="control-group">
-        <label class="control-label"></label>
-        <div class="controls">
-          <button id="Submit" name="Submit" onclick="handleFormSubmission();" class="btn btn-default">Submit</button>
-        </div>
-      </div>
-
-      </fieldset>
-      </form>
-      -->
 </div>
   </div>
 <script type="text/javascript">
@@ -283,6 +244,22 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+  // handle navigation clicks
+  $("#link_home").click(function() {
+    $('html, body').animate({
+            scrollTop: $("#home_section").offset().top
+        }, 200);
+  })
+  $("#link_resume").click(function() {
+    $('html, body').animate({
+            scrollTop: $("#resume_section").offset().top
+        }, 200);
+  })
+  $("#link_contact").click(function() {
+    $('html, body').animate({
+            scrollTop: $("#contact_section").offset().top
+        }, 200);
+  })
 </script>
 </body>
 </html>
