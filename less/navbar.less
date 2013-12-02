@@ -20,6 +20,9 @@
   @media (min-width: @grid-float-breakpoint) {
     border-radius: @navbar-border-radius;
   }
+  @media (max-width: @grid-float-breakpoint) {
+    min-height: 30px;
+  }
 }
 
 
@@ -33,6 +36,20 @@
 
   @media (min-width: @grid-float-breakpoint) {
     float: left;
+  }
+
+  @media (max-width: @grid-float-breakpoint) {
+   > button {
+      margin-top: 5px;
+      margin-bottom: 5px;
+   }
+
+   > .navbar-brand > img {
+    width: 39px;
+    height: 39px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+   }
   }
 }
 

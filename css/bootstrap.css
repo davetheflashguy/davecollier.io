@@ -3627,6 +3627,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
     border-radius: 0px;
   }
 }
+@media (max-width: 768px) {
+  .navbar {
+    min-height: 30px;
+  }
+}
 .navbar-header:before,
 .navbar-header:after {
   content: " ";
@@ -3650,6 +3655,18 @@ textarea.input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-header {
     float: left;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-header > button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .navbar-header > .navbar-brand > img {
+    width: 39px;
+    height: 39px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 .navbar-collapse {
@@ -4455,19 +4472,6 @@ a.list-group-item.active > .badge,
     background: url("../img/html5-css3-js.png") bottom 25px right 25px no-repeat;
     background-size: 100px 111px;
     background-color: #3282c5;
-  }
-  .jumbotron h1 {
-    font-size: 100px;
-  }
-  .jumbotron h2 {
-    font-size: 38px;
-  }
-  .jumbotron h3 {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-  .jumbotron p {
-    font-size: 24px;
   }
 }
 .thumbnail {
