@@ -1,0 +1,81 @@
+//
+// Jumbotron
+// --------------------------------------------------
+
+
+.jumbotron {
+  height: 486px;
+  padding: @jumbotron-padding;
+  margin-bottom: @jumbotron-margin-bottom;
+  font-size: @jumbotron-font-size;
+  font-weight: 200;
+  line-height: (@line-height-base * 1.5);
+  color: @jumbotron-color;
+  background: url("../img/html5-css3-js.png") center right 30px no-repeat;
+  background-size: 413px 425px;
+  background-color: @jumbotron-bg;
+
+
+  h1 {
+    line-height: 1;
+    color: @jumbotron-heading-color;
+    position: relative;
+    left: -10px;
+  }
+  p {
+    line-height: 1.4;
+  }
+
+  .container & {
+    border-radius: @border-radius-large; // Only round corners at higher resolutions if contained in a container
+  }
+
+  @media screen and (min-width: @screen-sm-min) {
+    padding-top:    (@jumbotron-padding * 1.6);
+    padding-bottom: (@jumbotron-padding * 1.6);
+
+    .container & {
+      padding-left:  (@jumbotron-padding * 2);
+      padding-right: (@jumbotron-padding * 2);
+    }
+
+    h1 {
+      font-size: 100px;
+    }
+
+    h2 {
+      font-size:38px;
+    }
+
+    h3 {
+      font-size:26px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+  @media (max-width: @screen-xs-max) {
+      background: url("../img/html5-css3-js.png") bottom 25px right 25px no-repeat;
+      background-size: 100px 111px;
+      background-color: @jumbotron-bg;
+
+    h1 {
+      font-size: 100px;
+    }
+
+    h2 {
+      font-size:38px;
+    }
+
+    h3 {
+      font-size:26px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+}
