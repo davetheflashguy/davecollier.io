@@ -8,12 +8,12 @@ define(function (require, exports, module) {
 	var template = require('html!./home');
 
 	return Backbone.View.extend({
-		el: 'body',
+		el: '#app',
 		initialize: function(){
 
 		},
 		render: function(){
-			this.$el.html(template({}));
+			this.$el.append(template({}));
 		}
 	});
 

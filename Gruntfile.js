@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 					findNestedDependencies: true,
 					optimize: 'uglify2',
 					stubModules: ['text', 'html', 'css'],
-					include: ['app.start'],
+					include: ['handlebars', 'app.start'],
 					insertRequire: ['app.start']
 				}
 			}
@@ -26,14 +26,50 @@ module.exports = function(grunt) {
 			},
 			options: {}
 		},
+		tests: JSON.stringify(grunt.file.expand({},'public/**/*.test.js')).replace(/public\//g,'').replace(/.js/g,''),
+		replace: {
+			insertTests: {
+                    src: ['public/test/index.html'],
+                    overwrite: true,
+                    replacements: [
+                        {
+                            from: /require\(\[.*\]/,
+                            to: 'require('+'<%= tests %>'
+                        }
+                    ]
+            }
+		},
+		plato: {
+			your_task: {
+				files: {
+					'public/analysis': [
+						'public/**/*.js',
+						'!public/bower_components/**',
+						'!public/analysis/**',
+						'!public/test/**',
+						'!public/**/*.min.js'
+					]
+				}
+			}
+		},
+		mocha: {
+			all: ['public/test/index.html']
+        }
 	});
 
+	grunt.registerTask('test', ['replace:insertTests', 'mocha']);
+
 	grunt.registerTask('default', [
+		//'test',
+		'plato',
 		'requirejs',
 		'cssmin'
 	]);
 
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-plato');
+	grunt.loadNpmTasks('grunt-text-replace');
+	grunt.loadNpmTasks('grunt-mocha');
 
 };

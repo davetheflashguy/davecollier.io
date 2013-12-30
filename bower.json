@@ -2,7 +2,7 @@
   "name": "boilerplate",
   "version": "0.0.0",
   "authors": [
-    "Dave Collier <dave@davecollier.io>"
+    "Mundi Morgado <mundi@tandemseven.com>"
   ],
   "license": "MIT",
   "ignore": [
@@ -13,7 +13,7 @@
     "tests",
     "public/bower_components"
   ],
-  "homepage": "https://github.com/davetheflashguy/davecollier.io",
+  "homepage": "https://github.com/mundizzle/Single-Page-Application-Scaffold",
   "dependencies": {
     "almond": "~0.2.6",
     "jquery": "~1.10.2",
@@ -25,6 +25,8 @@
     "requirejs-text": "~2.0.10",
     "requirejs-handlebars-plugin": "https://github.com/mundizzle/requirejs-handlebars-plugin/archive/v0.0.3.zip",
     "requirejs": "~2.1.9",
-    "require-css": "~0.1.0"
+    "require-css": "~0.1.0",
+    "mocha": "~1.16.2",
+    "expect": "~0.2.0"
   }
 }
