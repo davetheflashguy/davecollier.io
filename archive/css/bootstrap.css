@@ -3661,12 +3661,16 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-header > button {
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-right: 15px;
   }
   .navbar-header > .navbar-brand > img {
     width: 39px;
     height: 39px;
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+  .navbar-header > .navbar-brand {
+    padding-left: 15px;
   }
 }
 .navbar-collapse {
@@ -4444,6 +4448,9 @@ a.list-group-item.active > .badge,
 .container .jumbotron {
   border-radius: 6px;
 }
+.jumbotron .btn {
+  margin-right: 20px;
+}
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding-top: 48px;
@@ -4472,6 +4479,20 @@ a.list-group-item.active > .badge,
     background: url("../img/html5-css3-js.png") bottom 25px right 25px no-repeat;
     background-size: 100px 111px;
     background-color: #3282c5;
+    height: 375px;
+  }
+  .jumbotron h1 {
+    left: 0px;
+    font-size: 42px;
+  }
+  .jumbotron h2 {
+    font-size: 36px;
+  }
+  .jumbotron h3 {
+    font-size: 24px;
+  }
+  .jumbotron p {
+    font-size: 24px;
   }
 }
 .thumbnail {

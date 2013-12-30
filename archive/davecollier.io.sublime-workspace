@@ -1,0 +1,324 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"get",
+				"getURL"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"App",
+				"AppController"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Library/WebServer/Documents/davecollier.io/less/variables.less",
+		"/Library/WebServer/Documents/davecollier.io/less/navbar.less",
+		"/Library/WebServer/Documents/davecollier.io/index.html",
+		"/Library/WebServer/Documents/davecollier.io/css/site.css",
+		"/Library/WebServer/Documents/davecollier.io/less/jumbotron.less",
+		"/Users/dave/Desktop/Boston",
+		"/Users/dave/Desktop/Tandem Seven Consulting",
+		"/Library/WebServer/Documents/davecollier.io/less/thumbnails.less",
+		"/Library/WebServer/Documents/davecollier.io/less/panels.less",
+		"/Library/WebServer/Documents/davecollier.io/less/mixins.less",
+		"/Library/WebServer/Documents/davecollier.io/less/responsive-utilities.less",
+		"/Library/WebServer/Documents/davecollier.io/less/bootstrap.less",
+		"/Users/dave/Downloads/DaveCollier_v3/css/style.css",
+		"/Library/WebServer/Documents/davecollier.io/css/bootstrap.css",
+		"/Library/WebServer/Documents/davecollier.io/node/tests/basic_server.js",
+		"/Library/WebServer/Documents/davecollier.io/node/tests/package.json",
+		"/Library/WebServer/Documents/davecollier.io/node/tests/network/basic_network_io.js",
+		"/Library/WebServer/Documents/davecollier.io/js/bootstrap.min.js",
+		"/Users/dave/Desktop/AMEX",
+		"/Library/WebServer/Documents/WoltersKluwer/AAN-Family-App/local/library-index.html",
+		"/Library/WebServer/Documents/WoltersKluwer/untitled.sublime-project",
+		"/Users/dave/Sites/davecollier.io/js/controllers.js",
+		"/Users/dave/Sites/davecollier.io/js/AppController",
+		"/Users/dave/Desktop/Site/index.html",
+		"/Users/dave/Desktop/Site/README.md"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Library/WebServer/Documents/davecollier.io/less"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"h1",
+			"Quote",
+			"hover",
+			"icon-bar",
+			"navbar-nav",
+			"sm",
+			"navbar-nav",
+			"float: left",
+			"float:left",
+			"navbar",
+			"heading",
+			"h1",
+			"header",
+			"h1",
+			"@panel-bg",
+			".panel-collapse .panel-body",
+			".panel-default > .panel-heading + .panel-collapse .panel-body",
+			"panel-body",
+			"@panel-default-heading-bg",
+			";\n",
+			"FFF",
+			"panel-variant",
+			".panel-heading ",
+			"panel-heading",
+			"hover",
+			"panel",
+			"64px",
+			"weight",
+			"HOME",
+			"thumbnail",
+			";\n",
+			"@jumbotron-padding",
+			"@font-size-base",
+			"h2",
+			"@font-size-base",
+			"126",
+			"@jumbotron-font-size",
+			"font-size-",
+			"@jumbotron-font-size",
+			"navbar-default-link-hover-bg",
+			"@navbar-default-link-color",
+			"navbar",
+			"@navbar-padding-vertical",
+			"navbar-brand",
+			"3282c5",
+			"brand",
+			"FFF",
+			"font-color",
+			"h1",
+			"border-radius-",
+			"border-radius-none",
+			"navbar-default-bg",
+			"2c82c9",
+			"navbar-brand",
+			"brand",
+			"border-radius-base",
+			"navbar",
+			"2670ae",
+			"//",
+			"navbar-default-border",
+			"navbar",
+			"active",
+			"brand",
+			"f8f8f8",
+			"background",
+			"  ",
+			"previouslySelectedIndex"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"     "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "davecollier.io.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"jumbo",
+				"less/jumbotron.less"
+			],
+			[
+				"site",
+				"css/site.css"
+			],
+			[
+				"n",
+				"less/navbar.less"
+			],
+			[
+				"thumb",
+				"less/thumbnails.less"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"reso",
+				"less/responsive-utilities.less"
+			],
+			[
+				"nav",
+				"less/navbar.less"
+			],
+			[
+				"navbar.",
+				"less/navbar.less"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 193.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
