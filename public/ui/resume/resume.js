@@ -8,7 +8,7 @@ define(function (require, exports, module) {
 	var template = require('html!./resume');
 
 	return Backbone.View.extend({
-		el: '#app',
+		el: 'body',
 		initialize: function(){
 
 		},
