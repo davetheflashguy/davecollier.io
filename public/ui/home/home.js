@@ -9,7 +9,8 @@ define(function (require, exports, module) {
 
 		render: function(){
 
-			$('body').append(template({}));
+			this.$el.append(template({}));
+			
 		}
 	});
 

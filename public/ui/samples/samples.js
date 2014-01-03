@@ -7,7 +7,9 @@ define(function (require, exports, module) {
 
 	return BaseView.extend({
 		render: function(){
-			$('body').append(template({}));
+			
+			this.$el.append(template({}));
+			
 		}
 	});
 
