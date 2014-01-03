@@ -9,7 +9,7 @@ define(function (require, exports, module) {
 			'samples'	: 'samples',
 			'resume'	: 'resume',
 			'contact'	: 'contact'
-		}
+		},
 		home: function (){
 			this.scrollToById($(".home-container"));
 		},

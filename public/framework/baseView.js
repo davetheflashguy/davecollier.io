@@ -4,7 +4,6 @@ define(function (require) {
 
 	require('bootstrap_js');
 	require('css!bootstrap_css');
-	require('css!ui/_shared/styles/global');
 	var Backbone = require('backbone');
 	var mediator = require('framework/mediator');
 	
