@@ -1,19 +1,15 @@
 define(function (require, exports, module) {
 
-	require('bootstrap_js');
-	require('css!bootstrap_css');
-	var Backbone = require('backbone');
+	var BaseView = require('framework/baseView');
 
 	require('css!./home');
 	var template = require('html!./home');
 
-	return Backbone.View.extend({
-		el: 'body',
-		initialize: function(){
+	return BaseView.extend({
 
-		},
 		render: function(){
-			this.$el.append(template({}));
+			console.log(this.$el)
+			$('body').append(template({}));
 		}
 	});
 

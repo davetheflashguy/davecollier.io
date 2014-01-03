@@ -1,0 +1,38 @@
+[data-mode=development] .mode:after {
+	content: 'Development Mode';
+}
+
+[data-mode=production] .mode:after {
+	content: 'Production Mode';
+}
+
+.mode:after {
+	position: absolute;
+	left: 20px;
+	top: 5px;
+	display: block;
+}
+
+[data-mode=development] .mode {
+	background: red;
+}
+
+[data-mode=production] .mode {
+	background: green;
+}
+
+.mode {
+	border-radius: 0 0 0 5px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	height: 30px;
+	width: 200px;
+	color: #fff;
+}
+
+.sample {
+	display: block;
+	overflow: hidden;
+}
