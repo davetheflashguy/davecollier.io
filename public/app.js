@@ -45,6 +45,17 @@ define(function (require, exports, module) {
 
 	});
 
+	mediator.on('scrollToSection', function(id){
+
+		//TODO clean this function up
+		var val = $(id).offset().top - 126; 
+
+		$('html, body').animate({
+		        scrollTop: val
+		}, 1000);
+
+	});
+
 	return app;
 
 });
