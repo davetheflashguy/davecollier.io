@@ -1,5 +1,5 @@
-/*Styles specific to home go here*/
-
-.btn-primary {
-	background-color: blue;
+.samples-container {
+	padding-top: 48px;
+	padding-bottom: 48px;
+	background-color: #1abc9c;
 }

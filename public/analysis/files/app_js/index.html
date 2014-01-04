@@ -45,11 +45,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"></i></a></h2>
-      <p class="stat">78.12</p>
+      <p class="stat">74.45</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC"></i></h2>
-      <p class="stat">13</p>
+      <p class="stat">62</p>
     </div>
   </div>
   <div class="row historical">
@@ -63,11 +63,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty"></i></a></h2>
-      <p class="stat">7.13</p>
+      <p class="stat">10.78</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs"></i></a></h2>
-      <p class="stat">0.05</p>
+      <p class="stat">0.35</p>
     </div>
   </div>
 </div>
@@ -92,15 +92,64 @@
   <div class="row">
     <textarea id="file-source" class="col-md-12">define(function (require, exports, module) {
 
-	var Backbone = require(&#039;backbone&#039;);
+	var underscore = require(&#039;underscore&#039;);
 	var Router = require(&#039;app.router&#039;);
-
-	return {
+	var mediator = require(&#039;framework/mediator&#039;);
+	
+	var app = {
+		registeredViews: [],
 		router: new Router(),
 		start: function(){
-			Backbone.history.start();
+
+			require([&#039;ui/menu/menu&#039;,&#039;ui/home/home&#039;, &#039;ui/samples/samples&#039;, &#039;ui/resume/resume&#039;, &#039;ui/contact/contact&#039;], 
+
+			function(Menu, Home, Samples, Resume, Contact){
+
+				new Menu().render();
+				
+				new Home().render();
+
+				new Samples().render();
+
+				new Resume().render();
+
+				new Contact().render();
+				
+				Backbone.history.start();
+			});
+			
 		}
 	};
+
+	window.app = app;
+
+
+	mediator.on(&#039;registerView&#039;, function(view){
+		app.registeredViews.push(view);
+	});
+
+	mediator.on(&#039;clearViews&#039;, function(){
+
+		_.each(app.registeredViews, function(view){
+			mediator.off(null, null, view);
+			view.off();
+			view.remove();
+		});
+
+	});
+
+	mediator.on(&#039;scrollToSection&#039;, function(id){
+		
+		//TODO clean this function up
+		var val = $(id).offset().top - 126; 
+
+		$(&#039;html, body&#039;).animate({
+		        scrollTop: val
+		}, 1000);
+	});
+
+
+	return app;
 
 });</textarea>
   </div>

@@ -1,5 +1,8 @@
-/*Styles specific to home go here*/
+.home-container {
+	padding-top: 127px;
+}
 
-.btn-primary {
-	background-color: blue;
+/* Hide the free quote button since we don't have a UI to power it */
+#free-quote-btn {
+	display: none;
 }

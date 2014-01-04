@@ -45,7 +45,7 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"></i></a></h2>
-      <p class="stat">72.08</p>
+      <p class="stat">77.18</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC"></i></h2>
@@ -63,11 +63,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty"></i></a></h2>
-      <p class="stat">8.38</p>
+      <p class="stat">7.85</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs"></i></a></h2>
-      <p class="stat">0.23</p>
+      <p class="stat">0.16</p>
     </div>
   </div>
 </div>
@@ -93,39 +93,39 @@
     <textarea id="file-source" class="col-md-12">define(function (require, exports, module) {
 
 	var Backbone = require(&#039;backbone&#039;);
+	var mediator = require(&#039;framework/mediator&#039;);
 
 	return Backbone.Router.extend({
+
 		routes: {
-			&#039;&#039;: &#039;init&#039;
+			&#039;home&#039;		: &#039;home&#039;,
+			&#039;samples&#039;	: &#039;samples&#039;,
+			&#039;resume&#039;	: &#039;resume&#039;,
+			&#039;contact&#039;	: &#039;contact&#039;
 		},
-		init: function(){
 
-			require([&#039;ui/menu/menu&#039;,&#039;ui/home/home&#039;, &#039;ui/samples/samples&#039;, &#039;ui/resume/resume&#039;, &#039;ui/contact/contact&#039;], 
+		home: function (){
 
-			function(Menu, Home, Samples, Resume, Contact){
+			mediator.trigger(&#039;scrollToSection&#039;, $(&quot;.home-container&quot;));
 
-				var menu = new Menu();
-					menu.render();
-
-				var home = new Home();
-					home.render();
-
-				var samples = new Samples();
-					samples.render();
-
-				var resume = new Resume();
-					resume.render();
-
-				var contact = new Contact();
-					contact.render();
-			});
-
-			this.scrollToById(&#039;.jumbotron-container&#039;)
 		},
-		scrollToById: function(id) {
-			$(&#039;html,body&#039;).animate({
-	        	scrollTop: $(id).offset().top},
-	        &#039;slow&#039;);
+
+		samples: function(){
+
+			mediator.trigger(&#039;scrollToSection&#039;, $(&quot;.samples-container&quot;));
+
+		},
+
+		resume: function(){
+
+			mediator.trigger(&#039;scrollToSection&#039;, $(&quot;.resume-container&quot;));
+
+		},
+
+		contact: function(){
+
+			mediator.trigger(&#039;scrollToSection&#039;, $(&quot;.contact-container&quot;));
+
 		}
 	});
 

@@ -1,17 +1,42 @@
 <section class="contact-container">
-     <form role="form">
-          <div class="form-group">
-               <label for="name">Name</label>
-               <input type="text" class="form-control" id="name" placeholder="Enter name">
+     <div class="row">
+          <div class="col-md-4">
+                <div class="contact-info">
+                    <h3>Dave Collier</h3>
+                    <p>email: davetheflashguy [@] gmail dot com</p>
+                    <p>linkedin: http://www.linkedin.com/pub/dave-collier/a/516/1b2</p>
+                    <p>git: https://github.com/davetheflashguy</p>
+                    <p>twitter: @davetheflashguy</p>
+               </div>
           </div>
-          <div class="form-group">
-               <label for="email">Email</label>
-               <input type="text" class="form-control" id="email" placeholder="Enter email address">
+          <div class="col-md-8">
+               <div class="contact-form">
+                    <form role="form">
+                         <div class="form-group">
+                              <label for="name">Full Name</label>
+                              <input type="text" class="form-control" id="name" placeholder="Enter name">
+                         </div>
+                         <div class="form-group">
+                              <label for="subject">Subject</label>
+                              <select id="subject" placeholder="" class="form-control">
+                                   <option value="job_opp">Job Opportunity</option>
+                                   <option value="quote">Quote</option>
+                                   <option value="hello">Saying Hello</option>
+                                   <option value="question">Question</option>
+                              </select>
+                         </div>
+                         <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="text" class="form-control" id="email" placeholder="Enter email address">
+                         </div>
+                         <div class="form-group">
+                              <label for="email">Message</label>
+                              <textarea class="form-control" rows="3" id="message" placeholder="Enter message"></textarea>
+                         </div>
+                         <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+               </div>
           </div>
-          <div class="form-group">
-               <label for="email">Message</label>
-               <textarea class="form-control" rows="3" id="message" placeholder="Enter message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-     </form>
+
+     </div>
 </section>

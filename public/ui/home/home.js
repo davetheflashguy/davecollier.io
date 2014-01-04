@@ -10,6 +10,9 @@ define(function (require, exports, module) {
 		render: function(){
 
 			this.$el.append(template({}));
+
+			// activate the tool tips for this view
+			$("#availability-btn").tooltip();
 			
 		}
 	});
