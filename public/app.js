@@ -49,7 +49,7 @@ define(function (require, exports, module) {
 	mediator.on('scrollToSection', function(id){
 		
 		//TODO clean this function up
-		var val = $(id).offset().top - 126; 
+		var val = $(id).offset().top-127; 
 
 		$('html, body').animate({
 		        scrollTop: val
