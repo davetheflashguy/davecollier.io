@@ -12,9 +12,8 @@
 .contact-info>h3 {
 	margin-top: 0px;
 	margin-bottom: 10px;
-}
-.contact-info>p {
-	text-indent: 3px;
+	position: relative;
+	left: -3px;
 }
 
 .contact-form {
@@ -22,4 +21,8 @@
 	padding-left: 25px;
 	padding-bottom: 25px;
 	padding-right: 150px;
+}
+
+.contact-form .warning {
+	border-color: #c0392b;
 }

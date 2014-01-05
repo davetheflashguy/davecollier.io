@@ -34,19 +34,25 @@ define(function (require, exports, module) {
 			if ($('#name').val().length > 0 && $('#subject').val().length > 0 && $('#email').val().length > 0 && $('#message').val().length > 0) {
 				var url = "contact.php"; // the script where you handle the form input.
 
-				return;
 			    $.ajax({
 			           type: "POST",
 			           url: url,
-			           data: $("#contactForm").serialize(), // serializes the form's elements.
+			           data: $("#contact-form").serialize(), // serializes the form's elements.
 			           success: function(data)
 			           {
 			               //alert(data); // show response from the php script.
 			           }
 			         });
-
-			    return false; // avoid to execute the actual submit of the form.
+			    
+			    this.displayThanks();
 			}
+
+		},
+
+		displayThanks: function(){
+
+			var thanks = "<h3>Thanks for the message.  I'll get back to you as soon as time allows.<h3>"
+			$(".contact-form").html(thanks);
 
 		}
 
