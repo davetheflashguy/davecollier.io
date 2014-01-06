@@ -10,6 +10,8 @@
 	padding: 25px;
 }
 
+.contact-info>h1,
+.contact-info>h2,
 .contact-info>h3 {
 	margin-top: 0px;
 	margin-bottom: 10px;
