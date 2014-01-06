@@ -45,11 +45,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"></i></a></h2>
-      <p class="stat">75.37</p>
+      <p class="stat">71.00</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC"></i></h2>
-      <p class="stat">43</p>
+      <p class="stat">61</p>
     </div>
   </div>
   <div class="row historical">
@@ -63,11 +63,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty"></i></a></h2>
-      <p class="stat">6.40</p>
+      <p class="stat">15.94</p>
     </div>
     <div class="col-md-6">
       <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs"></i></a></h2>
-      <p class="stat">0.19</p>
+      <p class="stat">0.40</p>
     </div>
   </div>
 </div>
@@ -113,20 +113,38 @@
 		},
 
 		validateFormOnSubmit: function() {
-			console.log(&#039;yo&#039;)
-			var url = &quot;http://davecollier.io/contact.php&quot;; // the script where you handle the form input.
 
-		    $.ajax({
-		           type: &quot;POST&quot;,
-		           url: url,
-		           data: $(&quot;#contactForm&quot;).serialize(), // serializes the form&#039;s elements.
-		           success: function(data)
-		           {
-		               //alert(data); // show response from the php script.
-		           }
-		         });
+			var formElements = $(&#039;#name, #subject, #email, #message&#039;);
 
-		    return false; // avoid to execute the actual submit of the form.
+			for (i = 0 ; i &lt; formElements.length ; i++)
+			{
+			    if ($(formElements[i]).val().length === 0) {
+			     	$(formElements[i]).addClass(&#039;warning&#039;);
+			    }
+			}
+
+			if ($(&#039;#name&#039;).val().length &gt; 0 &amp;&amp; $(&#039;#subject&#039;).val().length &gt; 0 &amp;&amp; $(&#039;#email&#039;).val().length &gt; 0 &amp;&amp; $(&#039;#message&#039;).val().length &gt; 0) {
+				var url = &quot;contact.php&quot;; // the script where you handle the form input.
+
+			    $.ajax({
+			           type: &quot;POST&quot;,
+			           url: url,
+			           data: $(&quot;#contact-form&quot;).serialize(), // serializes the form&#039;s elements.
+			           success: function(data)
+			           {
+			               //alert(data); // show response from the php script.
+			           }
+			         });
+			    
+			    this.displayThanks();
+			}
+
+		},
+
+		displayThanks: function(){
+
+			var thanks = &quot;&lt;h3&gt;Thanks for the message.  I&#039;ll get back to you as soon as time allows.&lt;h3&gt;&quot;
+			$(&quot;.contact-form&quot;).html(thanks);
 
 		}
 
